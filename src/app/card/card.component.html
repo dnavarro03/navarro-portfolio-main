@@ -1,0 +1,18 @@
+<div class="card card-layout">
+    <div class="card-image-container" (click)="OpenCardModal()">
+        <img [src]="card.pictures[0]" alt="{{ card.name }}" class="card-image" />
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ card.name }}</h5>
+        <p class="card-text">{{ card.summary }}</p>
+    </div>
+    <div class="card-footer">
+        <a [href]="card.projectLink || 'javascript:void(0)'" 
+           [class.disabled]="!card.projectLink" 
+           target="_blank" 
+           class="icon-link" 
+           title="View Project">
+           <img width="64" height="64" src="https://img.icons8.com/glyph-neue/64/globe--v1.png" alt="globe--v1"/>
+        </a>
+    </div>
+</div>

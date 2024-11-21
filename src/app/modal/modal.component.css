@@ -1,0 +1,45 @@
+.modal-content {
+    background-color: #ffffff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.modal-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #8c98a3;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.modal-description {
+    font-weight: bold;
+    text-align: center;
+}
+
+img {
+    margin-bottom: 1rem;
+}
+
+.p-modal {
+    color: #8c98a3;
+    font-size: 1.12rem;
+    line-height: 1.5rem;
+}
+
+.github {
+    color: white;
+    position: relative;
+    text-decoration: none;
+}

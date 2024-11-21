@@ -1,0 +1,121 @@
+/* Contenedor de la imagen con efecto fade */
+.card-image-container {
+    position: relative;
+    width: 100%;
+    max-height: 250px; /* Aumenta la altura máxima de la imagen */
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.card-image-container:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar la imagen */
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.card-image-container::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%; /* Ajusta la altura del degradado */
+    background: linear-gradient(to top, #27333f, transparent); /* Color de fondo degradado */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: #333333;
+    width: 102%; /* Asegura que la tarjeta ocupe todo el ancho disponible */
+    max-width: 600px;
+    margin: 10px; /* Reduce el margen para acercar las tarjetas */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px;
+    height: 650px; /* Establece una altura fija para todas las tarjetas */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+/* Contenedor principal de las tarjetas */
+
+.card-layout:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra más intensa al hacer hover */
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    text-align: left; /* Alineación a la izquierda para estilo moderno */
+    padding: 15px 0;
+}
+
+.card-title {
+    color: #333333;
+    font-size: 1.8rem; /* Aumenta el tamaño de la fuente */
+    line-height: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #666666;
+    font-size: 1.1rem; /* Aumenta el tamaño del texto */
+    line-height: 1.8rem;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-start; /* Alinea el icono a la izquierda */
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-left: 0; /* Elimina el espacio a la izquierda */
+    background: none;
+    border-top: none;
+}
+
+.icon-link {
+    display: inline-block;
+    color: #000 !important; /* Fuerza el color negro */
+    font-size: 1.2rem;
+    text-decoration: none !important;
+    margin: 0; /* Elimina cualquier margen alrededor del icono */
+    background: none;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #000 !important; /* Mantiene el color negro en hover */
+    text-decoration: none !important; /* Asegura que no haya subrayado en hover */
+}
+
+.icon-link.disabled {
+    color: #ccc; /* Color gris para el estado inactivo */
+    pointer-events: none; /* Evita que se pueda hacer clic */
+    cursor: not-allowed; /* Muestra un cursor de "no permitido" */
+}
+
+.icon-link img {
+    width: 35px; /* Aumenta el tamaño del ícono */
+    height: 35px; 
+    transition: transform 0.3s ease;
+}
+
+.icon-link:hover img {
+    transform: scale(1.1); /* Opción de aumento al hacer hover */
+}
+

@@ -1,0 +1,20 @@
+/* Contenedor del encabezado de la sección de portafolio */
+.portfolio-header {
+    margin-bottom: 40px; /* Espacio inferior para separar del contenido */
+    padding-top: 40px; /* Espacio superior para separación */
+    text-align: center;
+}
+
+/* Título principal de la sección */
+.portfolio-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff; /* Ajusta según el tema */
+    margin-bottom: 10px;
+}
+
+/* Subtítulo o descripción de la sección */
+.portfolio-subtitle {
+    font-size: 1.2rem;
+    color: #ffffff; /* Color más suave para el subtítulo */
+}

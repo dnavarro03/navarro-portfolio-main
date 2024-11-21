@@ -1,0 +1,81 @@
+/* Ajuste para pantallas grandes */
+.home-container {
+    background: #141a20;
+    padding: 40px 20px;
+    border-radius: 8px;
+    height: 88vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0f0ff;
+}
+
+/* Contenedor de texto alineado a la izquierda */
+.text-left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 60%; /* Limita el ancho del texto */
+}
+
+.text-left {
+    margin: 0; /* Elimina márgenes adicionales */
+}
+
+.home-title {
+    font-size: 6rem;
+    color: #e0f0ff;
+    margin-bottom: 1rem;
+    line-height: 6rem;
+}
+
+.home-author {
+    font-size: 1.2rem;
+    color: #b0caf063;
+    margin-bottom: 2rem;
+    line-height: 2rem;
+}
+
+#dynamic-text {
+    border-right: 2px solid #00FF00;
+    padding-right: 5px;
+    animation: blink-caret 0.7s step-end infinite;
+    color: #00FF00;
+}
+
+/* Contenedor de la imagen decorativa */
+.image-container {
+    max-width: 35%; /* Tamaño de la imagen en relación al contenedor */
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 8px; /* Ajusta el borde de la imagen si es necesario */
+}
+
+/* Ajuste para pantallas móviles */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .text-left-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .home-title, .home-author {
+        font-size: 50px !important;
+    }
+
+    .home-author {
+        line-height: 4rem !important;
+    }
+
+    .image-container {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
